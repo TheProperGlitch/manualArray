@@ -8,7 +8,7 @@ public class NewArray {
         level = ar.length;
     }
 
-    public void add(int x){
+    public boolean add(int x){
         if (ar.length <= level){
             int[] tempar = new int[newLength(level)]; //Big O
             for (int i = 0 ; i < ar.length ; i++){
@@ -18,6 +18,7 @@ public class NewArray {
         }
         ar[level] = x;
         level++;
+        return true;
     }
 
     private int newLength(int l){
